@@ -1,15 +1,15 @@
-package org.cocos2dx.lib
+package com.xl.cocos
 
 import android.os.Bundle
 import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.blankj.utilcode.util.AppUtils
 import com.blankj.utilcode.util.BarUtils
 import com.blankj.utilcode.util.DeviceUtils
 import com.blankj.utilcode.util.LogUtils
 import com.blankj.utilcode.util.ScreenUtils
+import org.cocos2dx.lib.R
 
 class MainActivity : CocosActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

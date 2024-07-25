@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.tqtvjd.view.xedittext"
+    namespace = "com.xl.view.xedittext"
     compileSdk = 34
 
     defaultConfig {
@@ -32,7 +32,7 @@ android {
 publishing {
     publications {
         create<MavenPublication>("release") {
-            groupId = "com.tqtvjd.view"
+            groupId = "com.xl.view"
             artifactId = "xedittext"
             version = "1.0"
         }

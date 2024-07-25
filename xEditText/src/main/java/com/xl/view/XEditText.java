@@ -1,4 +1,4 @@
-package com.tqtvjd.view;
+package com.xl.view;
 
 import android.annotation.SuppressLint;
 import android.content.ClipData;
@@ -35,7 +35,7 @@ import androidx.core.graphics.drawable.DrawableCompat;
 import androidx.core.view.ViewCompat;
 import androidx.core.widget.TextViewCompat;
 
-import com.tqtvjd.view.xedittext.R;
+import com.xl.view.xedittext.R;
 
 import java.util.ArrayList;
 import java.util.List;

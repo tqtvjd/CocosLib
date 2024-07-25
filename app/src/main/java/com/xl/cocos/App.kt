@@ -1,4 +1,4 @@
-package org.cocos2dx.lib
+package com.xl.cocos
 
 import android.app.Application
 import com.blankj.utilcode.util.Utils

@@ -1,4 +1,4 @@
-package org.cocos2dx.lib
+package com.xl.cocos
 
 /**
  * Cocos2dx 代理者

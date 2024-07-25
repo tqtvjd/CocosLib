@@ -1,4 +1,4 @@
-package org.cocos2dx.lib;
+package com.xl.cocos;
 
 import android.os.Bundle;
 import android.view.MotionEvent;

@@ -1,4 +1,4 @@
-package org.cocos2dx.lib
+package com.xl.cocos
 
 import android.annotation.SuppressLint
 import android.app.Activity
@@ -21,7 +21,7 @@ import com.blankj.utilcode.util.GsonUtils
 import com.blankj.utilcode.util.KeyboardUtils
 import com.blankj.utilcode.util.LogUtils
 import com.blankj.utilcode.util.ScreenUtils
-import com.tqtvjd.view.XEditText
+import com.xl.view.XEditText
 import java.util.Locale
 import java.util.regex.Pattern
 
@@ -212,7 +212,13 @@ object EditTextUtils {
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                Cocos2dxUtils.execute(String.format(Locale.ENGLISH,"onTextChanged('%s')", s.toString()))
+                Cocos2dxUtils.execute(
+                    String.format(
+                        Locale.ENGLISH,
+                        "onTextChanged('%s')",
+                        s.toString()
+                    )
+                )
             }
 
             override fun afterTextChanged(s: Editable?) {

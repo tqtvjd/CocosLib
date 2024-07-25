@@ -1,4 +1,4 @@
-package org.cocos2dx.lib
+package com.xl.cocos
 
 import android.content.Context
 import android.content.res.Resources

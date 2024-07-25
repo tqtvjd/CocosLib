@@ -1,5 +1,5 @@
 
-package org.cocos2dx.lib
+package com.xl.cocos
 
 object AndroidUtils {
 
