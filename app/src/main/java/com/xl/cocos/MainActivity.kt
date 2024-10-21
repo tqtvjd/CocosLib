@@ -9,6 +9,7 @@ import com.blankj.utilcode.util.BarUtils
 import com.blankj.utilcode.util.DeviceUtils
 import com.blankj.utilcode.util.LogUtils
 import com.blankj.utilcode.util.ScreenUtils
+import cc.lx.utils.EditTextUtils
 import org.cocos2dx.lib.R
 
 class MainActivity : CocosActivity() {
@@ -33,13 +34,13 @@ class MainActivity : CocosActivity() {
                 "text": "",
                 "hint": "Enter Phone Number",
                 "textSize": 42,
-                "isPassword": false,
+                "isPassword": true,
                 "maxLength": 12,
                 "regexPattern": "[0-9]{0,12}",
                 "maxLines": 1,
-                "textColor": "#333333",
-                "hintColor": "#999999",
-                "rawInputType": 1
+                "textColor": "#ffffff",
+                "hintColor": "#aaaaaa",
+                "inputMode": 2
             }
         """.trimIndent()
 
