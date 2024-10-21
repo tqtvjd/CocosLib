@@ -35,10 +35,13 @@ android {
 
 publishing {
     publications {
-        create<MavenPublication>("release") {
+        create<MavenPublication>("ReleaseAar") {
             groupId = "com.xl.cocos"
-            artifactId = "cocos2dx-lib"
+            artifactId = "utils"
             version = "1.0"
+            afterEvaluate {
+                artifact(tasks.getByName("bundleReleaseAar"))
+            }
         }
     }
 }

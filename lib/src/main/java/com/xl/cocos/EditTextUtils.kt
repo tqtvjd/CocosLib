@@ -15,12 +15,12 @@ import android.text.method.PasswordTransformationMethod
 import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.FrameLayout
-import androidx.core.view.children
 import com.blankj.utilcode.util.ActivityUtils
 import com.blankj.utilcode.util.GsonUtils
 import com.blankj.utilcode.util.KeyboardUtils
 import com.blankj.utilcode.util.LogUtils
 import com.blankj.utilcode.util.ScreenUtils
+import com.blankj.utilcode.util.SizeUtils
 import com.xl.view.XEditText
 import java.util.Locale
 import java.util.regex.Pattern
@@ -137,7 +137,7 @@ object EditTextUtils {
         // 创建一个新的 EditText
         editText.apply {
             hint = config.hint
-            textSize = config.textSize.toFloat()
+            textSize = SizeUtils.px2sp(config.textSize.toFloat()).toFloat()
             setTextColor(Color.parseColor(config.textColor))
             setHintTextColor(Color.parseColor(config.hintColor))
             maxLines = config.maxLines
@@ -228,10 +228,11 @@ object EditTextUtils {
 
     private fun hide(activity: Activity) {
         val contentView = activity.window.decorView.findViewById<ViewGroup>(android.R.id.content)
-        contentView.children.forEach {
-            if (it is EditText) {
-                it.clearFocus()
-                contentView.removeView(it)
+        for(i in 0 until contentView.childCount) {
+            val child = contentView.getChildAt(i)
+            if(child is XEditText) {
+                child.clearFocus()
+                contentView.removeView(child)
             }
         }
     }

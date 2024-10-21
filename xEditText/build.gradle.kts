@@ -29,12 +29,16 @@ android {
     }
 }
 
+
 publishing {
     publications {
-        create<MavenPublication>("release") {
+        create<MavenPublication>("ReleaseAar") {
             groupId = "com.xl.view"
-            artifactId = "xedittext"
+            artifactId = "XEditText"
             version = "1.0"
+            afterEvaluate {
+                artifact(tasks.getByName("bundleReleaseAar"))
+            }
         }
     }
 }

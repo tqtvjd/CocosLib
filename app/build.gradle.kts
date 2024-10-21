@@ -43,5 +43,6 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.utilcodex)
+//    implementation(libs.xl.cocosLib)
     implementation(project(":lib"))
 }

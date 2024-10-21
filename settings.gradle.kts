@@ -24,3 +24,4 @@ rootProject.name = "CocosLib"
 include(":app")
 include(":lib")
 include(":xEditText")
+include(":shareREC")
