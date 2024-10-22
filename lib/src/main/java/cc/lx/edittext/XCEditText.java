@@ -10,7 +10,6 @@ import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.widget.FrameLayout;
 
-import cc.lx.utils.CocosInputMode;
 import com.xl.view.XEditText;
 
 import java.util.regex.Pattern;

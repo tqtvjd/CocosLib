@@ -1,4 +1,4 @@
-package cc.lx.utils;
+package cc.lx.edittext;
 
 
 public enum CocosInputMode {
