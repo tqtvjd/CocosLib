@@ -3,11 +3,13 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.graphics.Rect;
 import android.text.Editable;
+import android.util.Log;
 import android.view.ViewGroup;
 
 import com.blankj.utilcode.util.ActivityUtils;
 import com.blankj.utilcode.util.GsonUtils;
 import com.blankj.utilcode.util.KeyboardUtils;
+import com.blankj.utilcode.util.LogUtils;
 import com.blankj.utilcode.util.ScreenUtils;
 import com.xl.view.XEditText;
 import java.util.Locale;
@@ -19,6 +21,10 @@ import cc.lx.edittext.XCEditText;
 public class EditTextUtils {
 
     public static void show(String configJson, String rectJson) {
+        LogUtils.d("configJson");
+        LogUtils.json(configJson);
+        LogUtils.d("rectJson");
+        LogUtils.json(rectJson);
         EditTextConfig config = GsonUtils.fromJson(configJson, EditTextConfig.class);
         EditTextRect rect = GsonUtils.fromJson(rectJson, EditTextRect.class);
         float scale = ScreenUtils.getScreenHeight() / rect.gameHeight;

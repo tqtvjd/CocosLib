@@ -21,7 +21,7 @@ import cc.lx.service.ScreenRecordService;
 /**
  * 系统录屏
  */
-public class SysRecordUtils {
+public class SysRecorderWrapper {
 
     private final static int REQUEST_CODE = 101;
 
@@ -29,6 +29,17 @@ public class SysRecordUtils {
     private MediaProjectionManager mediaProjectionManager;
     //录屏服务
     private ScreenRecordService screenRecordService;
+
+    private static SysRecorderWrapper instance;
+    //单例模式
+    private SysRecorderWrapper() {}
+
+    public static SysRecorderWrapper getInstance() {
+        if (instance == null) {
+            instance = new SysRecorderWrapper();
+        }
+        return instance;
+    }
 
     //连接服务成功与否，具体连接过程
     //调用连接接口，实现连接，回调连接结果
@@ -55,7 +66,7 @@ public class SysRecordUtils {
         }
     };
 
-    void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         //首先判断请求码是否一致，结果是否ok
         if (requestCode == REQUEST_CODE && resultCode == Activity.RESULT_OK) {
             //录屏请求成功，使用工具MediaProjection录屏
@@ -95,10 +106,14 @@ public class SysRecordUtils {
     }
 
     public void stopRecord() {
-        if (screenRecordService != null && !screenRecordService.isRunning()) {
+        if(screenRecordService == null)  {
+            ToastUtils.showShort("Record is not started!");
+            return;
+        }
+        if (!screenRecordService.isRunning()) {
             //没有在录屏，无法停止，弹出提示
             ToastUtils.showShort("Not recording, please start first!");
-        } else if (screenRecordService != null && screenRecordService.isRunning()) {
+        } else {
             //停止录屏
             screenRecordService.stopRecord();
         }

@@ -56,6 +56,9 @@ public class XCEditText extends XEditText {
             setSingleLine();
         }
 
+        // 设置是否可清除
+        setDisableClear(!config.cleanable);
+
         // 设置输入类型
         int inputType;
         switch (config.inputMode) {

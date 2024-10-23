@@ -12,4 +12,6 @@ public class EditTextConfig implements Serializable {
     public boolean isPassword;
     public int maxLength;
     public String regexPattern;
+    //可清空
+    public boolean cleanable;
 }
