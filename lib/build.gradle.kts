@@ -43,5 +43,5 @@ publishing {
 dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.utilcodex)
-    implementation(project(":xEditText"))
+    implementation(libs.xedittext)
 }
